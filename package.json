@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "docker-build": "docker build --tag prestonneal.com:latest .",
+    "docker-run": "docker run -d -p 8080:80 --name prestonneal.com prestonneal.com:latest",
     "preview": "vite preview"
   },
   "devDependencies": {
