@@ -1,13 +1,13 @@
-import './style.css'
+const buildMainPage = async (document: Document) => {
+  const name: string = 'Preston Neal'
+  const title: string = 'Software Engineer'
+  const app: HTMLElement = document.getElementById('app')!
 
-const app: HTMLElement = document.getElementById('app')!
-
-const name: string = 'Preston Neal'
-const title: string = 'Software Engineer'
-
-app.innerHTML = `
+  app.innerHTML = `
     <div class="m-auto text-center">
-      <h1 class="p-1">${name}</h1>
-      <h2 class="p-1">${title}</h2>
+      <h1 id="name" class="p-1">${name}</h1>
+      <h2 id="title" class="p-1">${title}</h2>
     </div>
-`
+  `
+}
+export { buildMainPage }
