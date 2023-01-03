@@ -1,5 +1,5 @@
 # PrestonNeal.com
-![build](https://github.com/nealwp/prestonneal.com/actions/workflows/build.yml/badge.svg)
+![build](https://github.com/nealwp/prestonneal.com/actions/workflows/build.yaml/badge.svg)
 
 Featuring:
 - TypeScript
