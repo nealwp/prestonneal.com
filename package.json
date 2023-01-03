@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "test": "jest",
+    "test:watch": "jest --watch",
     "docker-build": "docker build --tag prestonneal.com:latest .",
     "docker-run": "docker run -d -p 8080:80 --name prestonneal.com prestonneal.com:latest",
     "preview": "vite preview"

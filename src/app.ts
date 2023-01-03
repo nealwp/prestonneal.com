@@ -1,4 +1,4 @@
 import './style.css'
-import { buildMainPage } from './main'
+import { mainPage } from './main-page'
 
-await buildMainPage(document)
+mainPage.render(document)
