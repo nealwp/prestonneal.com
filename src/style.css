@@ -112,3 +112,11 @@ html, body {
 .p-1 {
   padding: 10px;
 }
+
+.text-sm {
+  font-size: small;
+}
+
+.gray {
+  color: #666
+}
