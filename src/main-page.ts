@@ -13,7 +13,7 @@ const mainPage = {
         <img src='/hedgehog-noborder.svg' height=300 width=200>
         <h1 id="name" class="p-1">${mainPage.name}</h1>
         <h2 id="title" class="p-1">${mainPage.title}</h2>
-        <p class="text-sm gray">Version ${mainPage.version}<p>
+        <p class="text-sm gray">Version <span id="version">${mainPage.version}</span><p>
       </div>
     `
   }

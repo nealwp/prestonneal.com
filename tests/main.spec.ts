@@ -22,4 +22,8 @@ describe('main page', () => {
         const titleElement = document.getElementById("title")
         expect(titleElement?.textContent).toEqual(mainPage.title)
     })
+    test('should have correct version', () => {
+        const versionElement = document.getElementById("version")
+        expect(versionElement?.textContent).toEqual(mainPage.version)
+    })
 })
