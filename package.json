@@ -8,9 +8,9 @@
     "build": "tsc && vite build",
     "test": "jest",
     "test:watch": "jest --watch",
-    "docker:build": "docker build --tag nealwp/prestonneal.com:latest --tag nealwp/prestonneal.com:$(git rev-parse --short HEAD) .",
-    "docker:publish": "npm run docker:build && docker push nealwp/prestonneal.com",
-    "docker:run": "docker run -d -p 8080:80 --name nealwp/prestonneal.com nealwp/prestonneal.com:latest",
+    "docker:build": "docker build --tag 627143802709.dkr.ecr.us-west-2.amazonaws.com/prestonneal.com:latest --tag 627143802709.dkr.ecr.us-west-2.amazonaws.com/prestonneal.com:$(git rev-parse --short HEAD) .",
+    "docker:publish": "npm run docker:build && docker push 627143802709.dkr.ecr.us-west-2.amazonaws.com/prestonneal.com",
+    "docker:run": "docker run -d -p 8080:80 --name prestonneal.com 627143802709.dkr.ecr.us-west-2.amazonaws.com/prestonneal.com:latest",
     "preview": "vite preview"
   },
   "devDependencies": {
