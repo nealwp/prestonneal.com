@@ -6,6 +6,8 @@ describe('default test', () => {
     })
 })
 
+jest.mock('../src/services/analytics.service.ts')
+
 describe('main page', () => {
 
     beforeAll(async () => {

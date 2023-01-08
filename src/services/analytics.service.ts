@@ -1,9 +1,10 @@
-import axios  from 'axios'
+import axios from 'axios'
+import { config } from '../config/app.config'
 
-const apiBaseUrl = 'http://localhost:8081'
+const url = config.apiUrl
 
 const getSiteVisitCount = async (): Promise<number> => {
-    return await axios.get(`${apiBaseUrl}/v1/analytics/site-visits`)
+    return await axios.get(`${url}/v1/analytics/site-visits`)
         .then(res => {
             return res.data.siteVisits
         })
@@ -13,7 +14,7 @@ const getSiteVisitCount = async (): Promise<number> => {
 }
 
 const logSiteVisit = async (): Promise<number> => {
-    return await axios.post(`${apiBaseUrl}/v1/analytics/site-visits`)
+    return await axios.post(`${url}/v1/analytics/site-visits`)
         .then(res => {
             return res.data.siteVisits
         })
