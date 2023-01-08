@@ -12,7 +12,7 @@ describe('main page', () => {
         const app = document.createElement('div')
         app.setAttribute('id', 'app')
         document.body.appendChild(app)
-        mainPage.render(document)
+        await mainPage.render(document)
     })
     test('should have correct name', async () => {
         const nameElement = document.getElementById("name")
@@ -25,5 +25,9 @@ describe('main page', () => {
     test('should have correct version', () => {
         const versionElement = document.getElementById("version")
         expect(versionElement?.textContent).toEqual(mainPage.version)
+    })
+    test('should display site visit count', async () => {
+        const siteVisitElement = document.getElementById("site-visits")
+        expect(siteVisitElement).toBeTruthy()
     })
 })
