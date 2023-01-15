@@ -1,4 +1,5 @@
-on: push
+on:
+  push:
 
 name: AWS ECR push
 
@@ -11,6 +12,9 @@ jobs:
     - name: Checkout
       id: checkout
       uses: actions/checkout@v2
+
+    - name: Read Commit SHA
+      id: vars
       run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
 
     - name: Configure AWS credentials
@@ -30,7 +34,7 @@ jobs:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: ${{ secrets.AWS_REPO_NAME }}
         IMAGE_TAG: latest
-        SHA_TAG: ${{ steps.checkout.outputs.sha_short }}
+        SHA_TAG: ${{ steps.vars.outputs.sha_short }}
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -t $ECR_REGISTRY/$ECR_REPOSITORY:$SHA_TAG .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
