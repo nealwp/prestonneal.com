@@ -120,3 +120,7 @@ html, body {
 .gray {
   color: #666
 }
+
+.font-mono {
+  font-family: monospace;
+}

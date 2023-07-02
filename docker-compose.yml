@@ -1,0 +1,6 @@
+version: "3.9"
+services:
+  api:
+    ports: 
+      - "8081:8081"
+    image: "627143802709.dkr.ecr.us-west-2.amazonaws.com/api.prestonneal.com:latest"
