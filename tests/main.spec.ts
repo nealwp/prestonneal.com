@@ -1,3 +1,4 @@
+import { describe, test, vi, beforeAll, expect } from 'vitest'
 import { mainPage } from '../src/main-page'
 
 describe('default test', () => {
@@ -6,7 +7,7 @@ describe('default test', () => {
     })
 })
 
-jest.mock('../src/services/analytics.service.ts')
+vi.mock('../src/services/analytics.service.ts')
 
 describe('main page', () => {
 
